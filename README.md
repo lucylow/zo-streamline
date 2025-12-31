@@ -27,7 +27,7 @@ A modern, full-stack SaaS platform for molecular docking simulations with AI-pow
 
 ## 🏗️ Architecture
 
-```
+\`\`\`
 ┌─────────────────────────────────────────────────────────┐
 │                Frontend (Next.js 16)                    │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐ │
@@ -53,7 +53,7 @@ A modern, full-stack SaaS platform for molecular docking simulations with AI-pow
 │               Solana Blockchain Network                 │
 │         (Immutable Report Storage & Verification)       │
 └─────────────────────────────────────────────────────────┘
-```
+\`\`\`
 
 ## 🛠️ Tech Stack
 
@@ -87,23 +87,23 @@ A modern, full-stack SaaS platform for molecular docking simulations with AI-pow
 ### Setup
 
 1. **Clone the repository**
-```bash
+\`\`\`bash
 git clone <repository-url>
 cd streamline
-```
+\`\`\`
 
 2. **Install dependencies**
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. **Configure environment variables**
-```bash
+\`\`\`bash
 cp .env.local.example .env.local
-```
+\`\`\`
 
 Edit `.env.local`:
-```env
+\`\`\`env
 # Solana Configuration
 NEXT_PUBLIC_SOLANA_NETWORK=devnet
 
@@ -112,12 +112,12 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 
 # WebSocket Configuration
 NEXT_PUBLIC_WS_URL=ws://localhost:8000
-```
+\`\`\`
 
 4. **Run development server**
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 5. **Open browser**
 Navigate to `http://localhost:3000`
@@ -202,7 +202,7 @@ In Phantom:
 
 ### SolanaClient
 
-```typescript
+\`\`\`typescript
 // Get wallet balance
 const balance = await solanaClient.getBalance(publicKey)
 
@@ -220,11 +220,11 @@ const reportData = await solanaClient.getReportData(signature)
 
 // Request devnet airdrop
 await solanaClient.requestAirdrop(publicKey, 1)
-```
+\`\`\`
 
 ### AI Agent
 
-```typescript
+\`\`\`typescript
 // Run AI analysis
 const analysis = await analyzeWithAI({
   jobId: "job_123",
@@ -239,7 +239,7 @@ const report = await generateStakeholderReport({
   stakeholder: "investor",
   format: "pdf"
 })
-```
+\`\`\`
 
 ## 🎨 Design System
 
@@ -301,11 +301,11 @@ Built with shadcn/ui and Radix UI for accessibility and consistency
    - Preview deployments for PRs
 
 ### Environment Variables
-```env
+\`\`\`env
 NEXT_PUBLIC_SOLANA_NETWORK=devnet
 NEXT_PUBLIC_API_URL=https://api.streamline.com
 NEXT_PUBLIC_WS_URL=wss://api.streamline.com
-```
+\`\`\`
 
 ## 📖 Documentation
 

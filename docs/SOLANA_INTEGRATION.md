@@ -35,7 +35,7 @@ StreamLine uses Solana blockchain to provide immutable, verifiable storage of mo
 
 ## Architecture
 
-```
+\`\`\`
 ┌─────────────────────────────────────────────────────────────┐
 │                    Frontend (Next.js)                       │
 │                                                             │
@@ -57,7 +57,7 @@ StreamLine uses Solana blockchain to provide immutable, verifiable storage of mo
                     │ Solana Network  │
                     │   (Blockchain)  │
                     └─────────────────┘
-```
+\`\`\`
 
 ## Setup Instructions
 
@@ -67,10 +67,10 @@ Download and install Phantom wallet from [phantom.app](https://phantom.app)
 ### 2. Environment Configuration
 Add the following to your `.env.local` file:
 
-```bash
+\`\`\`bash
 # Solana Configuration
 NEXT_PUBLIC_SOLANA_NETWORK=devnet  # devnet, testnet, or mainnet-beta
-```
+\`\`\`
 
 ### 3. Get Devnet SOL
 For testing on devnet:
@@ -82,7 +82,7 @@ For testing on devnet:
 
 ### Storing Reports on Blockchain
 
-```typescript
+\`\`\`typescript
 import { solanaClient } from "@/lib/solana-client"
 import { useWallet } from "@/contexts/wallet-context"
 
@@ -105,11 +105,11 @@ if (result.success) {
   console.log("Transaction signature:", result.signature)
   console.log("Explorer URL:", result.explorerUrl)
 }
-```
+\`\`\`
 
 ### Verifying Reports
 
-```typescript
+\`\`\`typescript
 // Get report data from transaction
 const reportData = await solanaClient.getReportData(signature)
 
@@ -119,11 +119,11 @@ if (reportData) {
   console.log("Stakeholder:", reportData.stakeholder)
   console.log("Verified:", reportData.verified)
 }
-```
+\`\`\`
 
 ### Using the Neuraviva SDK Directly
 
-```typescript
+\`\`\`typescript
 import { NeuravivaSDK } from "@/lib/solana/neuraviva-sdk"
 import { Connection } from "@solana/web3.js"
 
@@ -144,7 +144,7 @@ const result = await sdk.storeReportHash(wallet, {
   stakeholder: "investor",
   metadata: { version: "1.0" }
 })
-```
+\`\`\`
 
 ## API Reference
 
@@ -165,7 +165,7 @@ Store a report hash on blockchain with comprehensive metadata.
 - `params.metadata`: Additional metadata (max 512 chars when stringified)
 
 **Returns:**
-```typescript
+\`\`\`typescript
 {
   success: boolean
   transactionHash: string
@@ -173,7 +173,7 @@ Store a report hash on blockchain with comprehensive metadata.
   error?: string
   explorerUrl?: string
 }
-```
+\`\`\`
 
 #### `verifyReportWithSDK(wallet, jobId, verificationData): Promise<TransactionResult>`
 Verify a stored report on blockchain.
@@ -338,6 +338,6 @@ Planned features:
 - Report versioning on-chain
 - NFT generation for milestone reports
 - DAO governance for validation
-```
+\`\`\`
 
-```env file="" isHidden
+\`\`\`env file="" isHidden
