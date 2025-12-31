@@ -1,4 +1,4 @@
-# StreamLine - Molecular Docking Platform with Blockchain Verification
+# StreamLine AI-Driven Reporting and Visualization Tool - Molecular Docking Platform with Blockchain Verification
 
 A modern, full-stack SaaS platform for molecular docking simulations with AI-powered analysis and Solana blockchain verification.
 
