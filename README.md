@@ -335,12 +335,6 @@ This project is licensed under the MIT License.
 - **AutoDock Vina** - Docking engine
 - **OpenAI** - AI analysis capabilities
 
-## 📞 Support
-
-For support and questions:
-- Email: support@streamline.com
-- Documentation: https://docs.streamline.com
-- Community: https://discord.gg/streamline
 
 ## 🗺️ Roadmap
 
